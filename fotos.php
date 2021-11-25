@@ -3,65 +3,42 @@
     <head>
         <meta charset="utf-8"/>
         <title>Fotos</title>
-
+        <link href="bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+        <script src="bootstrap-5.1.3-dist/js/popper.min.js" type="text/javascript"></script>
+        <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js" type="text/javascript"></script>
         <style type="text/css">
-            input{
-                padding: 5px;
-                text-align: center;
-                font-family: cursive;
-            }
-            #tabla1{
-                border: 1px solid black;
-                padding: 5px;
-            }
+
         </style>
     </head>
     <body>
-        <form action="fotos.php" method="post">
-            <table id="tabla1">
+        <form action="controlador/fotosc.php" method="post" enctype="multipart/form-data">
+            <table id="tabla1" style="width:  400px" class="table table-hover table-bordered">
                 <tr>
                     <td><label for="ide">Id</label></td>
-                    <td><input type="number" id="ide" name="ide"></td> 
+                    <td><input type="number" id="ide" name="ide" class="form control"></td> 
                 </tr>
                 <tr>
                     <td><label for="df">Descripción fotos</label></td>
-                    <td><input type="text" id="df" name="df"></td> 
+                    <td><textarea type="text" id="df" name="df" class="form control">
+                        </textarea></td> 
                 </tr>
                 <tr>
-                    <td><label for="fo">Foto</label></td>
-                    <td><input type="text" id="fo" name="fo"></td> 
+                    <td><label for="foto">Foto</label></td>
+                    <td><input type="file" id="foto" name="foto" class="form control"></td> 
                 </tr>
                 <tr>
                     <td><label for="pc">Producto cb</label></td>
-                    <td><input type="text" id="pc" name="pc"></td> 
+                    <td><input type="text" id="pc" name="pc" class="form control"></td> 
                 </tr>
-                
+
                 <tr>
-                    <td><input type="submit" value="Guardar"></td>
+                    <td><input type="submit" name="submit" value="Guardar" class="btn btn-secondary"></td>
                     <td></td>
                 </tr>
             </table>
         </form>
-        <?php
-        if (isset($_POST['Id'])) {
-            require_once './controlador/conexion.php';
-            $ide = $_POST['ide'];
-            $df = $_POST['df'];
-            $fo= $_POST['fo'];
-            $pc = $_POST['pc'];
 
-
-            $sql = "INSERT INTO Personas VALUES('$ide','$df','$fo','$pc')";
-
-            if ($conn->query($sql) === TRUE) {
-                echo "La foto se ha guardado en la base";
-            } else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
-
-            $conn->close();
-        }
-        ?>
     </body>
 </html>
 
