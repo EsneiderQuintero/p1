@@ -15,8 +15,8 @@
         <form action="controlador/fotosc.php" method="post" enctype="multipart/form-data">
             <table id="tabla1" style="width:  400px" class="table table-hover table-bordered">
                 <tr>
-                    <td><label for="ide">Id</label></td>
-                    <td><input type="number" id="ide" name="ide" class="form control"></td> 
+                    <td><label for="id">Id</label></td>
+                    <td><input type="number" id="id" name="id" class="form control"></td> 
                 </tr>
                 <tr>
                     <td><label for="df">Descripción fotos</label></td>
