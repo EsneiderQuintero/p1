@@ -19,6 +19,9 @@
         </style>
     </head>
     <body>
+        <?php
+        require_once './menu.php';
+        ?>
         <form action="empleados.php" method="post">
             <table id="tabla1" class="table table-active table-sm">
                 <tr>

@@ -97,6 +97,9 @@
         </style>
     </head>
     <body>
+        <?php
+        require_once './menu.php';
+        ?>
         <form name="productosF" method="post" >
             <table id="tabla1" class="table table-responsive-lg table-info">
                 <tr>

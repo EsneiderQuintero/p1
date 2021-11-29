@@ -21,6 +21,9 @@
         </style>
     </head>
     <body>
+        <?php
+        require_once './menu.php';
+        ?>
         <form action="facturas.php" method="post">
             <table id="tabla1" class="table table-bordered table-striped">
                 <tr>

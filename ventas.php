@@ -20,6 +20,9 @@
         </style>
     </head>
     <body>
+        <?php
+        require_once './menu.php';
+        ?>
         <form action="ventas.php" method="post">
             <table id="tabla1">
                 <tr>

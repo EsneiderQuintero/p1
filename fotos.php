@@ -12,6 +12,9 @@
         </style>
     </head>
     <body>
+        <?php
+        require_once './menu.php';
+        ?>
         <form action="controlador/fotosc.php" method="post" enctype="multipart/form-data">
             <table id="tabla1" style="width:  400px" class="table table-hover table-bordered">
                 <tr>
