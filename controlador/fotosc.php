@@ -51,7 +51,7 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file)) {
         require_once './conexion.php';
-        $sql = "INSERT INTO fotos VALUES('" . $_POST['id'] . "','" . $_POST['df'] . "','" . $nombreArchivo . "','" . $_POST['pc'] . "')";
+        $sql = "INSERT INTO fotos VALUES('" . $_POST['id'] . "','" . $nombreArchivo . "','" . $_POST['df'] . "','" . $_POST['pc'] . "')";
         if ($conn->query($sql) === true) {
             Mensajes::success("La foto se ha subido y registrado");
         }

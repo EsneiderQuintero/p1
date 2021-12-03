@@ -22,6 +22,7 @@
                         myObj = JSON.parse(this.responseText);
                         document.getElementById("nombre").value = myObj[1];
                         document.getElementById("descripcion").value = myObj[2];
+                        ajaxImg(cb);
 
                     } catch (e) {
                         document.getElementById("nombre").value = "";

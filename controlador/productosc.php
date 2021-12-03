@@ -75,7 +75,7 @@ class Productosc extends Productos {
                         while ($row = $result->fetch_assoc()) {
                             $a = $i == 0 ? "active" : "";
                             echo '<div class="carousel-item ' . $a . '">';
-                            echo '<img src="img/' . $row['foto'] . '" alt="' . $row['df'] . '" class="d-block w-100" style="width:300px">';
+                            echo '<img src="img/' . $row['foto'] . '" alt="' . $row['descripcionFotos'] . '" class="d-block w-100" style="width:300px">';
                             echo '</div>';
                             $i++;
                         }
